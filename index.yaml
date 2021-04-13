@@ -1,0 +1,245 @@
+apiVersion: v1
+entries:
+  app-config:
+  - apiVersion: v1
+    appVersion: 0.3.0.1
+    created: "2021-04-13T12:38:35.491832948Z"
+    description: A Helm chart for Kubernetes
+    digest: d69103a06904c97af49b638308551cef3215ea64dc29b94a9394b375c626d2df
+    name: app-config
+    urls:
+    - https://github.com/RADAR-base/RADAR-Kubernetes/releases/download/app-config-0.1.0/app-config-0.1.0.tgz
+    version: 0.1.0
+  app-config-frontend:
+  - apiVersion: v2
+    appVersion: 0.3.0
+    created: "2021-04-13T12:38:35.641527976Z"
+    description: A Helm chart for Kubernetes
+    digest: 773811f7176934498c000b50383ec0791b51d2473cc066f7c0113bb0c392b4d8
+    name: app-config-frontend
+    type: application
+    urls:
+    - https://github.com/RADAR-base/RADAR-Kubernetes/releases/download/app-config-frontend-0.1.0/app-config-frontend-0.1.0.tgz
+    version: 0.1.0
+  catalog-server:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2021-04-13T12:38:35.817934312Z"
+    description: A Helm chart for Kubernetes
+    digest: a68bf883d37269291078e4fef7ebd99dba7738bd56568dbce67ffccf6e0ac3ce
+    name: catalog-server
+    urls:
+    - https://github.com/RADAR-base/RADAR-Kubernetes/releases/download/catalog-server-0.1.0/catalog-server-0.1.0.tgz
+    version: 0.1.0
+  cc-schema-registry-proxy:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2021-04-13T12:38:36.00233909Z"
+    description: A Helm chart for Kubernetes
+    digest: 4a949e95256f009108337083b9425a6f31697cb231ba769b13e5b5a666fcfb4c
+    name: cc-schema-registry-proxy
+    urls:
+    - https://github.com/RADAR-base/RADAR-Kubernetes/releases/download/cc-schema-registry-proxy-0.1.0/cc-schema-registry-proxy-0.1.0.tgz
+    version: 0.1.0
+  cert-manager:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2021-04-13T12:38:36.19842122Z"
+    dependencies:
+    - name: cert-manager
+      repository: https://charts.jetstack.io
+      version: v1.1.0
+    description: A Helm chart for Kubernetes
+    digest: 8c1f9891a72f1bfe070d43f1826637b47764739e4ac3db94422899c4ec32caa2
+    name: cert-manager
+    urls:
+    - https://github.com/RADAR-base/RADAR-Kubernetes/releases/download/cert-manager-0.1.0/cert-manager-0.1.0.tgz
+    version: 0.1.0
+  kafka-manager:
+  - apiVersion: v1
+    appVersion: 1.3.3.18
+    created: "2021-04-13T12:38:36.436235014Z"
+    description: A tool for managing Apache Kafka.
+    digest: 73119972be858ab129a457ada8345a11d73be9c78d8372af59aa1602cec1fbc6
+    home: https://github.com/yahoo/kafka-manager
+    icon: https://kafka.apache.org/images/logo.png
+    keywords:
+    - kafka
+    - zookeeper
+    - kafka-manager
+    kubeVersion: ^1.8.0-0
+    maintainers:
+    - email: giacomoguiulfo@gmail.com
+      name: giacomoguiulfo
+    - email: salim.salaues@scality.com
+      name: ssalaues
+    name: kafka-manager
+    sources:
+    - https://github.com/yahoo/kafka-manager
+    urls:
+    - https://github.com/RADAR-base/RADAR-Kubernetes/releases/download/kafka-manager-2.1.4/kafka-manager-2.1.4.tgz
+    version: 2.1.4
+  kube-prometheus-stack:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2021-04-13T12:38:36.623421443Z"
+    description: A Helm chart for Kubernetes
+    digest: 5a89e50527ea66cda83f9359919600dc126e62e7327e802457620cb45d4fa7d5
+    name: kube-prometheus-stack
+    urls:
+    - https://github.com/RADAR-base/RADAR-Kubernetes/releases/download/kube-prometheus-stack-0.1.0/kube-prometheus-stack-0.1.0.tgz
+    version: 0.1.0
+  management-portal:
+  - apiVersion: v1
+    appVersion: 0.6.4
+    created: "2021-04-13T12:38:36.815166766Z"
+    description: A Helm chart for Kubernetes
+    digest: dc4fe61ff20316af7a3020eb20b37d1d3ec4e484855f0f5074beb05a912a3874
+    name: management-portal
+    urls:
+    - https://github.com/RADAR-base/RADAR-Kubernetes/releases/download/management-portal-0.1.0/management-portal-0.1.0.tgz
+    version: 0.1.0
+  radar-backend:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2021-04-13T12:38:36.998208012Z"
+    description: A Helm chart for Kubernetes
+    digest: f4a69677bdb19234a5072ba76dcd67fef13b8ae475ee1ff8f78a78a6e1aeb5b2
+    name: radar-backend
+    urls:
+    - https://github.com/RADAR-base/RADAR-Kubernetes/releases/download/radar-backend-0.1.0/radar-backend-0.1.0.tgz
+    version: 0.1.0
+  radar-fitbit-connector:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2021-04-13T12:38:37.163197381Z"
+    description: A Helm chart for Kubernetes
+    digest: 54f89d1f3553f76a6c07df0bcb81ea05e5c99d8c07098b2e3ec677c2a182ef7e
+    name: radar-fitbit-connector
+    urls:
+    - https://github.com/RADAR-base/RADAR-Kubernetes/releases/download/radar-fitbit-connector-0.1.0/radar-fitbit-connector-0.1.0.tgz
+    version: 0.1.0
+  radar-gateway:
+  - apiVersion: v1
+    appVersion: 0.5.4
+    created: "2021-04-13T12:38:37.360353177Z"
+    description: A Helm chart for Kubernetes
+    digest: 3f05935c7f3545b34f9f61ac37c6dc0ec80725bbc0be712148a7d5b40aed89e0
+    name: radar-gateway
+    urls:
+    - https://github.com/RADAR-base/RADAR-Kubernetes/releases/download/radar-gateway-0.1.1/radar-gateway-0.1.1.tgz
+    version: 0.1.1
+  radar-integration:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2021-04-13T12:38:37.568915937Z"
+    description: A Helm chart for Kubernetes
+    digest: 2658eb2f61e054eb2df24798ee64e4ff10f3667fdb9ae7ef661a680f9cbd5be0
+    name: radar-integration
+    urls:
+    - https://github.com/RADAR-base/RADAR-Kubernetes/releases/download/radar-integration-0.1.0/radar-integration-0.1.0.tgz
+    version: 0.1.0
+  radar-jdbc-connector:
+  - apiVersion: v2
+    created: "2021-04-13T12:38:37.734173815Z"
+    description: A Helm chart for Kubernetes
+    digest: 5bf2b87d12b46ace2889c1c4c12c07af738007b3b71e6a295076de71dfe11b62
+    name: radar-jdbc-connector
+    urls:
+    - https://github.com/RADAR-base/RADAR-Kubernetes/releases/download/radar-jdbc-connector-0.1.0/radar-jdbc-connector-0.1.0.tgz
+    version: 0.1.0
+  radar-output:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2021-04-13T12:38:37.901328653Z"
+    description: A Helm chart for Kubernetes
+    digest: 6f175e9a2dee80a07eb37286cab57a6456c6d524006dcac3ad6868bc38a762d5
+    name: radar-output
+    urls:
+    - https://github.com/RADAR-base/RADAR-Kubernetes/releases/download/radar-output-0.1.0/radar-output-0.1.0.tgz
+    version: 0.1.0
+  radar-rest-sources-authorizer:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2021-04-13T12:38:38.063914045Z"
+    description: A Helm chart for Kubernetes
+    digest: a9b875bd8a791f2a498d468f95cae869573d878171665373d673b8c44829c65f
+    name: radar-rest-sources-authorizer
+    urls:
+    - https://github.com/RADAR-base/RADAR-Kubernetes/releases/download/radar-rest-sources-authorizer-0.1.0/radar-rest-sources-authorizer-0.1.0.tgz
+    version: 0.1.0
+  radar-rest-sources-backend:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2021-04-13T12:38:38.214380295Z"
+    description: A Helm chart for Kubernetes
+    digest: 4573577891dcba418d6c72ea82c41f325905f5f4cda003ef4ee6a85ec8c132dc
+    name: radar-rest-sources-backend
+    urls:
+    - https://github.com/RADAR-base/RADAR-Kubernetes/releases/download/radar-rest-sources-backend-0.1.0/radar-rest-sources-backend-0.1.0.tgz
+    version: 0.1.0
+  radar-s3-connector:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2021-04-13T12:38:38.389405684Z"
+    description: A Helm chart for Kubernetes
+    digest: 186a745a47ab2788da9953038f79286c6b1ad91ff57fe62a4859af43a1bdd23f
+    name: radar-s3-connector
+    urls:
+    - https://github.com/RADAR-base/RADAR-Kubernetes/releases/download/radar-s3-connector-0.1.0/radar-s3-connector-0.1.0.tgz
+    version: 0.1.0
+  radar-upload-connect-backend:
+  - apiVersion: v1
+    appVersion: 0.5.8
+    created: "2021-04-13T12:38:38.552270049Z"
+    description: A Helm chart for Kubernetes
+    digest: 4d8d16974a5c7ecc3bee69915a8f459210824924ce512494b5ba4b9287082405
+    name: radar-upload-connect-backend
+    urls:
+    - https://github.com/RADAR-base/RADAR-Kubernetes/releases/download/radar-upload-connect-backend-0.1.0/radar-upload-connect-backend-0.1.0.tgz
+    version: 0.1.0
+  radar-upload-connect-frontend:
+  - apiVersion: v1
+    appVersion: 0.5.8
+    created: "2021-04-13T12:38:38.715990136Z"
+    description: A Helm chart for Kubernetes
+    digest: ee377e3f87f90135efa99f0faafbc9b1c46019d60f65404d10b4b7a9fd222429
+    name: radar-upload-connect-frontend
+    urls:
+    - https://github.com/RADAR-base/RADAR-Kubernetes/releases/download/radar-upload-connect-frontend-0.1.0/radar-upload-connect-frontend-0.1.0.tgz
+    version: 0.1.0
+  radar-upload-source-connector:
+  - apiVersion: v1
+    appVersion: 0.5.8
+    created: "2021-04-13T12:38:38.880424442Z"
+    description: A Helm chart for Kubernetes
+    digest: b23acb3ef58dcb10cefe08596175e2713f1be44cf5cab8105ead055bd2be2f4a
+    name: radar-upload-source-connector
+    urls:
+    - https://github.com/RADAR-base/RADAR-Kubernetes/releases/download/radar-upload-source-connector-0.1.0/radar-upload-source-connector-0.1.0.tgz
+    version: 0.1.0
+  s3-proxy:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2021-04-13T12:38:39.045887075Z"
+    description: A Helm chart for Kubernetes
+    digest: 161e162c3a09e90ff1b95d222c27ebfe07ae9e46b77fdfa35027701df90134dc
+    name: s3-proxy
+    urls:
+    - https://github.com/RADAR-base/RADAR-Kubernetes/releases/download/s3-proxy-0.1.0/s3-proxy-0.1.0.tgz
+    version: 0.1.0
+  velero:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2021-04-13T12:38:39.221334077Z"
+    dependencies:
+    - name: velero
+      repository: https://vmware-tanzu.github.io/helm-charts
+      version: 2.12.0
+    description: A Helm chart for Kubernetes
+    digest: 3d646619dee1ff34bb211173d57439d63d7fec136e5e557e058489a9377b46a4
+    name: velero
+    urls:
+    - https://github.com/RADAR-base/RADAR-Kubernetes/releases/download/velero-0.1.0/velero-0.1.0.tgz
+    version: 0.1.0
+generated: "2021-04-13T12:38:35.295972924Z"
