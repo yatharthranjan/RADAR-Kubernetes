@@ -346,3 +346,6 @@ timescaledb:
 radar_jdbc_connector:
   _install: true
   replicaCount: 1
+
+confluent_cloud:
+  enabled: false
