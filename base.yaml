@@ -71,9 +71,9 @@ velero:
     secretKey: secretKey
   backup:
     address: s3.amazon.com  # protocol should not be specified
+    bucket: radar-base-backups
     accessKey: accessKey
     secretKey: secretKey
-    bucket: radar-base-backups
   velero:
     configuration:
       backupStorageLocation:
@@ -88,6 +88,15 @@ velero:
           aws_secret_access_key=secretKey
 
 # --------------------------------------------------------- 10-base.yaml ---------------------------------------------------------
+confluent_cloud:
+  enabled: false
+  cc:
+    bootstrapServerurl: confluentBootstrapServers
+    schemaRegistryUrl: confluentSchemaRegistryUrl
+    apiKey: ccApikey
+    apiSecret: ccApiSecret
+    schemaRegistryApiKey: srApiKey
+    schemaRegistryApiSecret: srApiSecret
 
 cp_zookeeper:
   _install: true
@@ -149,7 +158,6 @@ smtp:
     size: 1Gi
 
 # --------------------------------------------------------- 20-dashboard.yaml ---------------------------------------------------------
-
 hotstorage_password: password
 
 radar_dashboard:
@@ -242,16 +250,11 @@ radar_output:
 
 # --------------------------------------------------------- 20-ingestion.yaml ---------------------------------------------------------
 
-cp_kafka_rest:
-  _install: true
-  replicaCount: 1
-
 radar_gateway:
   _install: true
   replicaCount: 1
 
 # --------------------------------------------------------- 20-kafka-analysis.yaml ---------------------------------------------------------
-
 
 radar_backend_monitor:
   _install: true
@@ -346,6 +349,3 @@ timescaledb:
 radar_jdbc_connector:
   _install: true
   replicaCount: 1
-
-confluent_cloud:
-  enabled: false

@@ -21,6 +21,12 @@ spec:
         app.kubernetes.io/name: {{ include "radar-gateway.name" . }}
         app.kubernetes.io/instance: {{ .Release.Name }}
     spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
       affinity:
         podAntiAffinity:
           preferredDuringSchedulingIgnoredDuringExecution:
@@ -39,6 +45,8 @@ spec:
               topologyKey: "kubernetes.io/hostname"
       containers:
         - image: sscaling/jmx-prometheus-exporter
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
           imagePullPolicy: IfNotPresent
           name: prometheus-jmx-exporter
           env:
@@ -60,17 +68,16 @@ spec:
           command: ["radar-gateway", "/etc/radar-gateway/gateway.yml"]
           env:
           - name: JAVA_OPTS
-            value: "-XX:GCTimeRatio=19 -XX:MinHeapFreeRatio=20 -XX:MaxHeapFreeRatio=30"
+            value: "-XX:GCTimeRatio=19 -XX:MinHeapFreeRatio=20 -XX:MaxHeapFreeRatio=30 --add-opens java.base/java.io=ALL-UNNAMED --add-opens java.management/javax.management.openmbean=ALL-UNNAMED --add-opens java.base/java.lang.reflect=ALL-UNNAMED --add-opens java.management/javax.management=ALL-UNNAMED -Djava.util.logging.manager=org.apache.logging.log4j.jul.LogManager"
           ports:
             - name: http
-              containerPort: 80
+              containerPort: {{ .Values.service.port }}
               protocol: TCP
           livenessProbe:
             exec:
               command:
-              - /bin/sh
-              - -c
-              - curl -Is localhost/radar-gateway/topics 2>&1 | grep -q 401 || exit 1
+                - /bin/sh
+                - /etc/radar-gateway/healthcheck.sh
             initialDelaySeconds: 5
             periodSeconds: 90
             timeoutSeconds: 5
@@ -79,9 +86,8 @@ spec:
           readinessProbe:
             exec:
               command:
-              - /bin/sh
-              - -c
-              - curl -Is localhost/radar-gateway/topics 2>&1 | grep -q 401 || exit 1
+                - /bin/sh
+                - /etc/radar-gateway/healthcheck.sh
             initialDelaySeconds: 5
             periodSeconds: 90
             timeoutSeconds: 5
